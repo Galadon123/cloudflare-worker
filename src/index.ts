@@ -1,6 +1,21 @@
 import { Hono } from 'hono'
 
-const app = new Hono()
+type Bindings = {
+  CF_TOKEN: string
+}
+
+const app = new Hono<{ Bindings: Bindings }>()
+
+// Auth middleware - validates CF-Token header
+app.use('*', async (c, next) => {
+  const token = c.req.header('CF-Token')
+
+  if (!token || token !== c.env.CF_TOKEN) {
+    return c.json({ error: 'Unauthorized' }, 401)
+  }
+
+  await next()
+})
 
 // Route 1: Home
 app.get('/', (c) => {
