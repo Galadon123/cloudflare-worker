@@ -9,4 +9,4 @@ database_name = "tensorcode-db-stag"
 database_id = "ffed4b8e-b83c-406e-9c22-fadac4a40294"
 
 [vars]
-# CLOUDFLARE_API_TOKEN = "your-secret-token" # Don't commit secrets - use wrangler secret instead
+# CLOUDFLARE_API_TOKEN = "your-secret-token" # Don't commit secret - use wrangler secret instead
