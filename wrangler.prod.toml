@@ -1,12 +1,12 @@
-name = "tensorcode-cf-worker-stag"
+name = "tensorcode-cf-worker-prod"
 main = "src/index.ts"
 compatibility_date = "2024-12-01"
 account_id = "afeeea28ef4b58aad33f54322feaab68"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "tensorcode-db-stag"
-database_id = "ffed4b8e-b83c-406e-9c22-fadac4a40294"
+database_name = "tensorcode-db-prod"
+database_id = "bdaac9ab-7141-472d-9c4c-cb5cb3373f63"
 
 [vars]
 # CLOUDFLARE_API_TOKEN = "your-secret-token" # Don't commit secrets - use wrangler secret instead
